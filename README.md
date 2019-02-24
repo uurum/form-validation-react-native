@@ -4,7 +4,7 @@ Add Validate.js in your project.
 
 Import it in your form page.
 
-import { controlForm } from '../Validate';
+    import { controlForm } from '../Validate';
 
 Get your form data and validate.
 
