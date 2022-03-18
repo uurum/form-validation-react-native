@@ -31,7 +31,7 @@ function controlEmail(email) {
       result += `${type} section must be minimum ${min} characters \n`;
     }
   
-    if (result != '') {
+    if (result !== '') {
       return result.slice(0, -1);
     }
   
@@ -53,21 +53,21 @@ function controlEmail(email) {
     let formResult = '';
     arr.forEach(element => {
   
-      if (element.type == 'email') {
+      if (element.type === 'email') {
         let result = controlEmail(element.value);
         if (result != true) {
           formResult += result + '\n';
         }
       }
   
-      if (element.type == 'text') {
+      if (element.type === 'text') {
         let result = controlInput(element.value, element.name, element.max || null, element.min || null);
         if (result != true) {
           formResult += result + '\n';
         }
       }
   
-      if(element.type == 'select') {
+      if(element.type === 'select') {
         let result = controlSelect(element.value, element.name);
         if (result != true) {
           formResult += result + '\n';
@@ -76,7 +76,7 @@ function controlEmail(email) {
   
     });
   
-    if (formResult != '') {
+    if (formResult !== '') {
       return formResult;
     } else {
       return true;
