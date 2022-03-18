@@ -13,6 +13,7 @@ Get your form data and validate.
       email: this.state.email,
       office_id: this.state.office_id
     };
+    
     const formCtrl = [
       {
         type: 'text',
